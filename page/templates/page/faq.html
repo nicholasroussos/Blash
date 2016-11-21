@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+<!--<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+<title>Gulf Coast TK</title>
+</head>
+<!--style="background: url({% static "page/images/background2.png" %}"-->
+<body>
+{% include 'page/navigation.html' %}
+<h2 class="text-center">Frequently Asked Questions</h2>
+<div class="container well">
+{% for text in faq %}
+<ul class="faq-question" style="list-style: none;">Q: {{text.question}} <li class="faq-answer">A: {{text.answer}}</li></ul>
+{% endfor %}
+</div>
+</body>
+</html>

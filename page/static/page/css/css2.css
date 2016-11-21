@@ -1,0 +1,90 @@
+body {
+	background-color: rgb(238,242,255);
+	color: black;
+	font-family: arial, "Times New Roman", serif	
+}
+
+input[type=text] {
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 5px;
+	max-width: 75%;
+}
+input[type=text]:focus {
+	background-color: rgb(249, 250, 254);
+	}
+.text-label {
+}
+input[type=email] {
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 5px;
+	max-width: 75%
+}
+#id_first_name {
+	width: 300px;
+}
+#id_last_name {
+	width: 302px;
+}
+#id_student_email {
+	width: 276px;
+}
+#id_phone_number {
+	width: 274px;
+}
+@media screen and (max-width: 500px) {
+	#id_first_name {
+		width: 170px;
+	}
+	#id_last_name {
+		width: 172px;
+	}
+	#id_student_email {
+		width: 146px;
+	}
+	#id_phone_number {
+		width: 144px;
+}
+}
+select {
+	width: 100px;
+	border: none;
+	color: black;
+	background-color: rgb(250,255,250);
+
+}
+.instructor-banner {
+	background-color: rgb(113, 146, 255);
+	background-color: rgb(255,255,255);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+	color: rgb(113, 146, 255);
+}
+.underline-heading {
+	padding-bottom: 2px;
+	border-bottom: 1px solid black;
+}
+.sign-up-container {
+	margin-top: 10px;
+	background-color: rgb(113, 146, 255);
+	background-color: rgb(170, 190, 255);
+	padding-bottom: 15px;
+	border-radius: 5px;
+}
+#instructor-text {
+
+}
+#instructor-text::first-letter{
+	font-size: 18px;
+	font-family: Georgia, Arial;
+}

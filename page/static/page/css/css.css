@@ -1,0 +1,268 @@
+body {
+	background-color: rgb(238,242,255);
+	color: black;
+	font-family: arial, "Times New Roman", serif
+}
+.map {
+	width: 500px;
+	height: 500px;
+}
+@media screen and (max-width: 1200px) {
+    #special {
+    	border: none !important;
+    }
+    .map {
+    	width: 400px;
+    	height: 400px;
+    }
+}
+@media screen and (max-width: 780px) {
+    body {
+
+    }
+    .sign-up-but {
+   		margin-top: 20px;
+    }
+    .obj-info {
+    	border-bottom: 1px solid black;
+    }
+    .map {
+    	width: 300px;
+    	height: 300px;
+    }
+}
+
+.instructor-paragraph:first-letter {
+	font-size: 	150%;
+	font-family: Courier, Arial, Verdana;
+}
+
+a {
+	color: #0040ff;
+	text-decoration: none;
+}
+#special {
+	/*height: 250px;*/
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+}
+.map-center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.image-center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.bulletin-container {
+
+}
+.event-container {
+
+}
+.bulletin-individual {
+	margin-bottom: 4px;
+}
+#bulletin-headline {
+	padding-bottom: 4px;
+	border-bottom-style: solid;
+	border-width: 2px;
+}
+#event-headline {
+	padding-bottom: 4px;
+	border-bottom-style: solid;
+	border-width: 2px;
+}
+.nav-text:hover {
+	color:  rgb(113, 146, 255) !important;
+	border-left: 1px solid  rgb(113, 146, 255) !important;
+	border-right: 1px solid  rgb(113, 146, 255) !important;
+}
+.div-center {
+	float: none;
+    display: block;
+    margin: 0 auto;
+}
+.text-align-center {
+	text-align: center;
+}
+#divider-row {
+	height: 4px;
+	border: 2px outset gray;
+	background-color: gray;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+.banner {
+	height: 150px;
+	margin-bottom: 20px;
+}
+.test-gif {
+	width: 25%;
+	height: 200px;
+}
+.test-gif-2 {
+	width: 50%;
+	height: 300px;
+}
+.slideshow-img {
+	width: 80%;
+	height: 400px;
+}
+.slideshow-inactive {
+	display: none;
+}
+.span-buttons {
+	display: table;
+	margin: 0 auto;
+}
+.span-buttons {
+	position: relative;
+	bottom: 75px;
+}
+.span-buttons span:hover{
+	color: rgb(229, 61, 215);
+	cursor: pointer;
+}
+.glyphicon-menu-left {
+	font-size: 1.8em;
+}
+.glyphicon-menu-right {
+	font-size: 1.8em;
+}
+.side-well-links {
+	border-bottom: 1px solid black;
+}
+.para-indent {
+	text-indent: 50px;
+}
+.table-head {
+	color: rgb(230,230,230);
+	background-color: black;
+}
+.table-container {
+	background-color: rgb(255,255,255);
+	padding: 15px;
+	border-top: 1px outset rgb(211, 219, 226);
+	border-left: 1px outset rgb(211, 219, 226);
+	border-right: 1px solid rgb(192, 193, 226);
+	border-bottom: 1px solid rgb(192, 193, 226);
+	box-shadow: 2px 2px 3px black;
+}
+.header-instructor {
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
+}
+.faq-answer {
+	text-indent: 25px;
+}
+.faq-answer::first-letter {
+	font-size: 18pt;
+	color:  #cc0000;
+}
+.faq-question::first-letter {
+	font-size: 18pt;
+	color:  rgb(113, 146, 255);
+}
+#map {
+	box-shadow: 4px 4px 4px #888888;
+	border: 2px solid rgb(113, 146, 255);
+}
+#map2 {
+	box-shadow: 4px 4px 4px #888888;
+	border: 2px solid rgb(113, 146, 255);	
+}
+.school-face-text {
+	color: rgb(113, 146, 255);
+	font-weight: bold;
+}
+.color-text {
+	color: rgb(113,146,255);
+}
+input[type=text] {
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 5px;
+	max-width: 75%;
+}
+input[type=text]:focus {
+	background-color: rgb(249, 250, 254);
+	}
+.text-label {
+}
+input[type=email] {
+	color: black;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 5px;
+	max-width: 75%
+}
+#id_first_name {
+	width: 300px;
+}
+#id_last_name {
+	width: 302px;
+}
+#id_student_email {
+	width: 276px;
+}
+#id_phone_number {
+	width: 274px;
+}
+@media screen and (max-width: 500px) {
+	#id_first_name {
+		width: 170px;
+	}
+	#id_last_name {
+		width: 172px;
+	}
+	#id_student_email {
+		width: 146px;
+	}
+	#id_phone_number {
+		width: 144px;
+}
+}
+select {
+	width: 100px;
+	border: none;
+	color: black;
+	background-color: rgb(250,255,250);
+
+}
+.instructor-banner {
+	background-color: rgb(113, 146, 255);
+	background-color: rgb(255,255,255);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+}
+.underline-heading {
+	padding-bottom: 2px;
+	border-bottom: 1px solid black;
+}
+.sign-up-container {
+	margin-top: 10px;
+	background-color: rgb(113, 146, 255);
+	background-color: rgb(170, 190, 255);
+	padding-bottom: 15px;
+	border-radius: 5px;
+}
+.max-text-width {
+	max-width: 600px;
+
+}
+#instructor-text::first-letter{
+	font-size: 18px;
+	font-family: Georgia, Arial;
+}

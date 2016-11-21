@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+<title>Gulf Coast TK</title>
+</head>
+<!-- Fairhope School Div style="background: url({% static "page/images/background2.png" %}"-->
+<body>
+{% include 'page/navigation.html' %}
+<div class="fairhope-school col-md-6 col-lg-6 col-sm-12 col-xs-12">
+	<h4 class="text-center">Fairhope School</h4>
+
+	<div id="map" class="map-center map" style=""></div>
+  <h5 class="text-center">Address: 20730 AL-181, Fairhope, AL</h5>
+  <h5 class="text-center">Phone: (251)-279-8013</h5>
+  <h4 class="text-center school-face-text">School Face</h4>
+  <img src="{% static 'page/images/fairhope_school.jpg' %}" class="image-center" style="max-width:320px; max-height: 240px;"/>
+</div>
+
+<!-- Gulf Shores School Div -->
+<div class="fairhope-school col-md-6 col-lg-6 col-sm-12 col-xs-12">
+	<h4 class="text-center">Gulf Shores School</h4>
+	<div id="map2" class="map-center map" style=""></div>
+  <h5 class="text-center">Address: 17799 Fort Morgan Road, Gulf Shores, AL</h5>
+  <h5 class="text-center">Phone: </h5>
+  <h4 style=""class="text-center school-face-text">School Face</h4>
+  <img src="{% static 'page/images/gulf_shore_school.jpg' %}" class="image-center"/>
+</div>
+
+<div class="location-notes col-md-12 col-lg-12 col-sm-12 col-xs-12">
+  <br>
+</div>	
+<script>
+function myMap2() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(30.526983, -87.852353),
+    zoom: 15
+  }
+  var myCenter = new google.maps.LatLng(30.526983, -87.852353);
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  var mapCanvas2 = document.getElementById("map2");
+  var mapOptions2 = {
+    center: new google.maps.LatLng(30.255946, -87.720036),
+    zoom: 15
+  }
+  var myCenter2 = new google.maps.LatLng(30.255946, -87.720036);
+  var map2 = new google.maps.Map(mapCanvas2, mapOptions2);
+  var marker2 = new google.maps.Marker({position:myCenter2});
+  marker2.setMap(map2);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap2"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
