@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f&qdm!um=78-6j%!*#b#^z-dy@5xe9l(sn!$@m%^kwu%lr#b!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['percywk.pythonanywhere.com','www.gulfcoasttk.com', 'www.gulfcoasttkd.com', '.gulfcoasttaekwondo.com']
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+STATIC_ROOT = "/home/percywk/Blash/page/static"
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "page/static/page/images")
 
