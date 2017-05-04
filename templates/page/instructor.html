@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+<title>Instructor - Gulf Coast Taekwondo</title>
+</head>
+<!--style="background: url({% static "page/images/background2.png" %}"-->
+<body >
+{% include 'page/navigation.html' %}
+
+<!-- Workbench New Create Article like -->
+<div class="container">
+<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 instructor-article well">
+	<img src="{% static 'page/images/michael.jpg' %}" class="image-center instructors img-rounded" style="" />
+	<br>
+	<h3 class="text-center header-instructor">Michael Morris</h3>
+	<p class="para-indent">Mr. Morris is the instructor for both the Fairhope and Gulf Shores school. He has been teaching Taekwondo for 35 years. It has been a labor of love for him. He has trained since 1978. He won a Taekwondo National Championship in 1984. He describes it as the moment that stands out the most during his competing youth. After winning Mr. Morris continued to compete for some years, until he eventually began teaching. Currently, he holds a 7th degree black belt. The three core principles of his practice are: instilling confidence, forming discipline, and achieving the student's best. Mr. Morris's schools have family friendly Taekwondo hours for children, while also scheduling classes for adults.</p>
+	<p class="para-indent">Mr. Morris may sometimes defer the teaching of his classes to his son Bobby Morris. Bobby is also a black belt and has been studying since he has a child. In the above picture we can see Bobby when he was 5 years old.</p>
+	<p class="para-indent">Classes include the following: kicking and punching drills, freestyel and controlled sparring, Taekwondo form practice, and self defence training. Class is not structured beforehand, rather it is dynamic according to the students. </p>
+	<br>
+	<img src="{% static 'page/images/tkunited.jpeg' %}" class="image-center instructors" style="" />
+	<br>
+	<h3 class="text-center header-instructor">Taekwondo United</h3>
+	<p class="para-indent">
+		Mr. Morris is a member of the orginization known as Taekwondo United. "What is Taekwondo United exactly? Taekwondo United (TU) is a national martial arts co-op organization with schools located all across the United States.  All TU schools adhere to similar guidelines and procedures ensuring the highest standards by which each school teaches, promote students in rank, and project our image and reputation within the community.  All TU schools have a developed comprehensive training and fitness program for their students to follow.  This enables both children and adults to progress at their own pace and ensures that each school is able to meet the needs of all their students.  Over the years, TU has established a reputation built upon this standard of excellence, accordingly, we do not allow negative attitudes, aggressive behavior, or any misuse of Taekwondo in any manner.  TU schools compete exclusively in tournaments sponsored by the national co-op organization.  TU sponsors several regional and national tournaments, seminars and camps throughout the year and invites all enrolled students to participate in any of these events." (taekwondounited.org)
+	</p>
+
+</div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 well">
+		<h4 class="text-center side-well-links">Helpful Links<span class="glyphicon glyphicon-send"></span></h4>
+		<ul style="padding-left: 10px;">
+			<li><a href="http://taekwondounited.org/TUWEB/Taekwondo_United.html">Taekwondo United Website</a><br>
+			<li><a href="http://www.macho.com/taekwondo-uniforms/">Macho Uniforms</a><br>
+			<li><a href="https://www.facebook.com/Gulf-Coast-TaeKwonDo-Centers-167562269055/">Gulf Coast Taekwondo Facebook</a>
+		</ul>
+	</div>
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 well">
+		<h4 class="text-center side-well-links">Further Questions?</h4>
+		<a href="{% url 'faq' %}"><span class="glyphicon glyphicon-wrench"></span> Please see our FAQ page </a>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

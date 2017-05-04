@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+		</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class=""><a class="nav-text" href="{% url 'index' %}">Home</a></li>
+				<!--<li><a class="nav-text" href="{% url 'about' %}">About</a></li>
+				<li><a class="nav-text" href="{% url 'instructors' %}"> Instructor</a></li>-->
+				<li><a class="nav-text" href="{% url 'location' %}"> Location</a> </li>
+				<li><a class="nav-text" href="{% url 'schedule' %}"> Schedule</a> </li>
+				<!--<li><a class="nav-text" href="{% url 'faq' %}"> Faq</a> </li>-->
+			</ul>
+		</div>
+	</div>
+</nav>
+

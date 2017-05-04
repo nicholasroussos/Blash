@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+
+<title>Schedule - Gulf Coast Taekwondo</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<!--style="background: url({% static "page/images/background2.png" %}"-->
+<body >
+{% include 'page/navigation.html' %}
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+<h3 class="text-center">Fairhope School</h3>
+<div class="table-container">
+	<table class="table table-striped">
+<thead class="table-head">
+<tr>
+	<th> </th>
+	<th>Tuesday</th>
+	<th>Thursday</th>
+	<th>Saturday</th>
+</tr>
+</thead>
+<tr>
+	<td>Children Classes</td>
+	<td>5:00 P.M. - 6:00 P.M.</td>
+	<td>5:00 P.M. - 6:00 P.M.</td>
+	<td>11:00 A.M. - 12:00 P.M.</td>
+</tr>
+<tr>
+	<td>Adult Classes</td>
+	<td>6:00 P.M. - 7:00 P.M.</td>
+	<td>6:00 P.M. - 7:00 P.M.</td>
+	<td>11:00 A.M. - 12:00 P.M.</td>
+</tr>
+	</table>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+<h3 class="text-center">Gulf Shores School</h3>
+<div class="table-container">
+<table class="table table-striped">
+<thead class="table-head">
+<tr>
+	<th> </th>
+	<th>Monday</th>
+	<th>Wednesday</th>
+</tr>
+</thead>
+<tr>
+	<td>Children Classes</td>
+	<td>5:00 P.M. - 6:00 P.M.</td>
+	<td>5:00 P.M. - 6:00 P.M.</td>
+</tr>
+<tr>
+	<td>Adult Classes</td>
+	<td>6:00 P.M. - 7:00 P.M.</td>
+	<td>6:00 P.M. - 7:00 P.M.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="container">
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+		<br>
+		<p class="text-center" style="color: red;"> Schedules may be subject to change due to upcoming events. Check our bulletin board for notifications.
+	</div>
+</p>
+</div>
+
+<!--Create section to hold upcoming calendar photos if any-->
+<div class="container">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+	<h3 class="text-center">Current Calendar <span class="glyphicon glyphicon-calendar" style=""></span></h3>
+	<img src = "{% static "page/images/"%}/{{current_calendar.0.schedule_calendar}}" id="calendar_image" class="image-center img-responsive"/>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

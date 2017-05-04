@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+<title>Gulf Coast TK</title>
+</head>
+
+<body style="">
+{% include 'page/navigation.html' %}
+<p class='text-center'>Thank you for signing up. Feel free to walk in to any of our facilities on days we are open. Our schedule can be seen <a href='{% url 'schedule' %}' style="color: blue !important;">here</a></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

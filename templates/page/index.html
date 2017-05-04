@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+<!--<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gulf Coast Alabama Taekwondo Schools">
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/bootstrap.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'page/css/css.css' %}"/>
+<link href="{% static 'page/images/favicon.ico' %}" rel="shortcut icon"  type="image/x-icon"/>
+
+
+<title>Gulf Coast Taekwondo</title>
+</head>
+<!--style="background: url({% static "page/images/background7.png" %};-->
+<body>
+{% include 'page/navigation.html' %}
+<div class="container">
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+		<img src="{% static 'page/images/img_premier.jpg' %}" class="image-center img-responsive"/>
+		<br>
+	</div>
+	<div class="col-md-6 col-lg-6 col-sm-6 hidden-xs">
+		<img src="{% static 'page/images/smug_bs.jpg' %}" class="img-responsive image-center"/>
+		<br>
+	</div>
+	<div class="col-md-6 col-lg-6 col-sm-6 hidden-xs">
+		<img src="{% static 'page/images/logo.jpg' %}"  class="img-responsive image-center"/>
+		<br>
+	</div>
+</div>
+
+<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 well">
+	<h2 class="text-center">Gulf Coast Taekwondo Centers</h2>
+	<p class="max-text-width">We are a family run business serving the Gulf Coast region for over 20 years. We have two facilities, one is located in Fairhope, AL and the other in Gulf Shores AL. Both adult and children classes are held in either school. Our instructor views Taekwondo as more than just simple self defence. To him it can also be used to develop spiritually. The three points we focus on are: discipline, personal achievement, and confidence. It is our hope that through our schools we can help develop our students.</p>
+
+	<h3 class="text-center underline-heading">Available Pricing <span class="glyphicon glyphicon-piggy-bank"></span></h3>
+	<p>Adult trial classes for 10 weeks: $169</p>
+	<p>Child trial classes for 10 weeks: $169</p>
+</div>
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 sign-up-container">
+<h3 class="underline-heading text-center">Sign Up For Classes <span class="glyphicon glyphicon-edit"></span></h3>
+<form action="" method="post" class="">
+    {% csrf_token %}
+    <p class="">
+    	<label for="{{form.first_name.id_for_label}}" class="text-label control-label">First Name:</label>
+    	{{ form.first_name}}
+	</p>
+	<p>
+	    <label for="{{form.last_name.id_for_label}}" class="text-label">Last Name:</label>
+	    {{ form.last_name }}
+	</p>
+	<p>
+		<label for="{{form.student_email.id_for_label}}">Email Address:</label>
+		{{form.student_email}}
+	</p>
+	<p>
+		<label for="{{form.phone_number.id_for_label}}">Phone Number:</label>
+		{{form.phone_number}}
+	</p>
+	<p>
+		<label for="{{form.class_choices.id_for_label}}">Choose A Class Type:</label>
+		{{form.class_choice}}
+	</p>
+	<button type="submit" class="btn btn-default map-center" value="Submit">Submit</button>
+	{% if form.errors %}
+	{% for field in form %}
+		{% if field.errors %}
+			<br><div class="alert alert-danger">{{field.label}}: {{field.errors|striptags}}</div>
+		{% endif %}
+	{% endfor %}
+	{% endif %}
+</form>
+</div>
+</div>
+</div>
+<br>
+
+<div class="container instructor-banner">
+	<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+		<img src="{% static 'page/images/michael.jpg' %}" class="img-responsive"/>
+	</div>
+	<div class="col-md-8 col-lg-8 col-sm-6 col-xs-12">
+		<p class="max-text-width">Mr. Morris is the instructor for both the Fairhope and Gulf Shores school. He has been teaching Taekwondo for 35 years. It has been a labor of love for him. He has trained since 1978. He won a Taekwondo National Championship in 1984. He describes it as the moment that stands out the most during his competing youth. After winning Mr. Morris continued to compete for some years, until he eventually began teaching. Currently, he holds a 7th degree black belt. The three core principles of his practice are: instilling confidence, forming discipline, and achieving the student's best.</p>
+		<p class="max-text-width">Class drills include the following: kicking and punching drills, freestyle and controlled sparring, Taekwondo United form practice, and self defence training. Class is not structured beforehand, instiead it is dynamic.</p>
+	</div>
+</div>
+<br>
+<div class="container">
+<div class="col-md-1 col-lg-1"></div>
+<div class='col-md-4 col-lg-4 col-sm-5 col-xs-12 well bulletin-container'>
+	<h4 id="bulletin-headline" style="font-weight: bold;"><span class="glyphicon glyphicon-blackboard"></span> Bulletin Board</h4>
+	{% if bulletins.0 == '' %}
+		<p>No Bulletins Currently Posted.</p>
+	{% endif %}
+	{% for item in bulletins %}
+		<div class="bulletin-individual">
+			<p>{{item.new_announcement}}</p>
+		</div>
+	{% endfor %}
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2"></div>
+<div class='col-md-4 col-lg-4 col-sm-5 col-xs-12 well event-container'>
+	<h4 id="event-headline" style="font-weight: bold;"><span class="glyphicon glyphicon-sunglasses"></span> Upcoming Events</h4>
+	<!--<div class="event-container">-->
+	{% if events.0 == '' %}
+		<p>No Events Currently Posted.</p>
+	{% endif %}
+	{% for item in events %}
+		<div class="event-individual">
+			<p>{{item.new_event}} {{item.event_date}}</p>
+			<p>{{item.event_description}}</p>
+		</div>
+	{% endfor %}
+</div>
+<div class="col-md-1 col-lg-1"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type='text/javascript' src="{% static 'page/js/custom.js' %}"></script>
+
+</body>
+</html>
