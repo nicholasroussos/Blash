@@ -1,7 +1,7 @@
 body {
 	background-color: rgb(238,242,255);
 	color: black;
-	font-family: arial, "Times New Roman", serif	
+	font-family: arial, "Times New Roman", serif
 }
 
 input[type=text] {
@@ -87,4 +87,8 @@ select {
 #instructor-text::first-letter{
 	font-size: 18px;
 	font-family: Georgia, Arial;
+}
+#calendar_image {
+    max-width: 1500px;
+}
 }
